@@ -3,8 +3,8 @@ module Main where
 import Test.HUnit
 import System.Exit (exitFailure, exitSuccess)
 import TestReader (readerTests)
-import Parsing.TestExtractWord (extractWordTests)
 import Parsing.TestExtractToken (extractTokenTests)
+import Parsing.Extractors.TestExtractWord (extractWordTests)
     
 allTests :: Test
 allTests = TestList [

@@ -19,7 +19,8 @@ library textBookParser
   hs-source-dirs:      src
   exposed-modules:     Reader, 
                        Parsing.Data,
-                       Parsing.Parser
+                       Parsing.Parser,
+                       Parsing.Extractors.Word
                        
 
   build-depends:       base,
@@ -42,8 +43,8 @@ test-suite tests
     hs-source-dirs:      test
     main-is:             Spec.hs
     other-modules:       TestReader,
-                         Parsing.TestExtractWord,
-                         Parsing.TestExtractToken
+                         Parsing.TestExtractToken,
+                         Parsing.Extractors.TestExtractWord
                          
     build-depends:       base,
                          text,

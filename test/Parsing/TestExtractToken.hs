@@ -2,7 +2,10 @@ module Parsing.TestExtractToken (extractTokenTests) where
 
 import qualified Data.Text as T
 import Test.HUnit
+
+import Parsing.Data
 import Parsing.Parser
+import Parsing.Extractors.Word
 
 testExtractTokenSingle :: Test
 testExtractTokenSingle = TestCase $

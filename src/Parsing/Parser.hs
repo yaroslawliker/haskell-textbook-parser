@@ -1,25 +1,18 @@
 module Parsing.Parser where
 
 import Data.Text as T
-import Data.Char (isAlpha)
 
 import Parsing.Data
 
-extractWord :: ExtractToken
-extractWord input =
-    case T.uncons input of
-        Nothing -> Nothing
-        Just (firstChar, _) ->
-            if isAlpha firstChar
-            then
-                let (word, rest) = T.span isAlpha input
-                in Just $ ExtractionResult (Token Word word) rest
-            else
-                Nothing
+-- Extractors
+import Parsing.Extractors.Word
 
+-- List of all extracters
 allTokenExtractors :: [ExtractToken]
 allTokenExtractors = [extractWord]
 
+-- Extractes token with given list of extracters and text
+-- If no extracters match the symbol, extracts the symbol as Undefined
 extractToken :: [ExtractToken] -> Text -> ExtractionResult
 extractToken extractors text
     | T.null text = ExtractionResult (Token EOF T.empty) T.empty
@@ -35,7 +28,7 @@ extractToken extractors text
                 Just a  -> a
                 Nothing -> tryExtractors fs
 
-
+-- Parses the book (or other text) into tokens
 parseText :: T.Text -> [Token]
 parseText text =
     if tokenType token == EOF

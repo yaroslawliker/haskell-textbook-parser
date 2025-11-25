@@ -1,5 +1,8 @@
 module Parsing.Data where
 
+import Data.Text as T
+
+-- Enumeration of token types
 data TokenType =
     Word | -- Simple word, as "названа"
     Punctiation | -- Set of symbols: ,.:[]()

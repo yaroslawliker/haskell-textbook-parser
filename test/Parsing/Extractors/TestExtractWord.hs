@@ -1,8 +1,10 @@
-module Parsing.TestExtractWord (extractWordTests) where
+module Parsing.Extractors.TestExtractWord (extractWordTests) where
 
 import qualified Data.Text as T
 import Test.HUnit
-import Parsing.Parser
+
+import Parsing.Data
+import Parsing.Extractors.Word
 
 testExtractWord :: Test
 testExtractWord = TestCase $
