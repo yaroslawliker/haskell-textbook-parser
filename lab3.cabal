@@ -18,7 +18,9 @@ common warnings
 library textBookParser
   hs-source-dirs:      src
   exposed-modules:     Reader, 
+                       Parsing.Data,
                        Parsing.Parser
+                       
 
   build-depends:       base,
                        text,
@@ -30,7 +32,7 @@ executable lab3
     build-depends:    base ^>=4.18.3.0,
                       text,
                       pretty-simple,
-                      textBookParser,
+                      textBookParser                      
 
     hs-source-dirs:   app
     default-language: Haskell2010
