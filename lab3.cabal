@@ -39,7 +39,8 @@ test-suite tests
     hs-source-dirs:      test
     main-is:             Spec.hs
     other-modules:       TestReader,
-                         Parsing.TestExtractWord
+                         Parsing.TestExtractWord,
+                         Parsing.TestExtractToken
                          
     build-depends:       base,
                          text,
