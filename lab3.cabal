@@ -38,7 +38,9 @@ test-suite tests
     type:                exitcode-stdio-1.0
     hs-source-dirs:      test
     main-is:             Spec.hs
-    other-modules:       TestReader
+    other-modules:       TestReader,
+                         Parsing.TestExtractWord
+                         
     build-depends:       base,
                          text,
                          HUnit,
