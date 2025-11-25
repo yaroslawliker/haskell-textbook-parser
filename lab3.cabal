@@ -28,6 +28,7 @@ executable lab3
     import:           warnings
     main-is:          Main.hs
     build-depends:    base ^>=4.18.3.0,
+                      text,
                       textBookParser
 
     hs-source-dirs:   app
