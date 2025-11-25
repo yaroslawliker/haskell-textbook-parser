@@ -43,22 +43,34 @@ extractWord input =
 allTokenExtractors :: [ExtractToken]
 allTokenExtractors = [extractWord]
 
+extractToken :: [ExtractToken] -> Text -> ExtractionResult
 extractToken extractors text
-    | T.null text = Just $ ExtractionResult (Token EOF T.empty) T.empty
+    | T.null text = ExtractionResult (Token EOF T.empty) T.empty
     | otherwise   = tryExtractors extractors
     where
         tryExtractors [] = 
             case T.uncons text of
-                Nothing -> Nothing
-                Just (x, xs) -> Just $ ExtractionResult (Token Undifined (T.singleton x)) xs
+                Just (x, xs) -> ExtractionResult (Token Undifined (T.singleton x)) xs
 
         tryExtractors (f:fs) =
             let result = f text
             in case result of
-                Just _  -> result
+                Just a  -> a
                 Nothing -> tryExtractors fs
 
 
--- parseText :: String -> [Token]
+-- extractAllTokens :: 
+
+
+-- parseText :: T.Text -> [Token]
 -- parseText text = 
+--     | T.null text = []
+--     | otherwise
+        
+--         where
+--             Maybe () = extractToken allTokenExtractors text
+            
+            
+        
+
 

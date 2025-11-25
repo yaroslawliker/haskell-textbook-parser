@@ -4,11 +4,13 @@ import Test.HUnit
 import System.Exit (exitFailure, exitSuccess)
 import TestReader (readerTests)
 import Parsing.TestExtractWord (extractWordTests)
+import Parsing.TestExtractToken (extractTokenTests)
     
 allTests :: Test
 allTests = TestList [
     readerTests,
-    extractWordTests
+    extractWordTests,
+    extractTokenTests
     ]
 
 main :: IO ()
