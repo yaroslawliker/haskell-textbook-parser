@@ -1,10 +1,15 @@
 module Main where
 
-import qualified Data.Text.IO as TIO
+import System.IO (hSetEncoding, stdout, utf8)
 import Reader (readBook)
+import Parsing.Parser (parseText)
+import Text.Pretty.Simple (pPrint)
+
 
 main :: IO ()
 main = do
-    let bookFile = "src/res/book.txt"
+    let bookFile = "src/res/short_book.txt"
+    hSetEncoding stdout utf8
     book <- readBook bookFile
-    TIO.putStrLn book
+    let tokens = parseText book
+    pPrint tokens
