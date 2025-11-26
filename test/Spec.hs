@@ -4,6 +4,7 @@ import Test.HUnit
 import System.Exit (exitFailure, exitSuccess)
 import TestReader (readerTests)
 import Parsing.TestExtractToken (extractTokenTests)
+import Parsing.Extractors.TestExtractSequence (extractSequenceGenericTests)
 import Parsing.Extractors.TestExtractWord (extractWordTests)
 import Parsing.Extractors.TestExtractPunctuation (extractPunctuationTests)
 import Parsing.Extractors.Punctuation (extractPunctiation)
@@ -13,7 +14,8 @@ allTests = TestList [
     readerTests,
     extractWordTests,
     extractTokenTests,
-    extractPunctuationTests
+    extractPunctuationTests,
+    extractSequenceGenericTests
     ]
 
 main :: IO ()
