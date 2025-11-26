@@ -6,10 +6,14 @@ import Parsing.Data
 
 -- Extractors
 import Parsing.Extractors.Word
+import Parsing.Extractors.Punctuation (extractPunctiation)
 
 -- List of all extracters
 allTokenExtractors :: [ExtractToken]
-allTokenExtractors = [extractWord]
+allTokenExtractors = [
+    extractWord,
+    extractPunctiation
+    ]
 
 -- Extractes token with given list of extracters and text
 -- If no extracters match the symbol, extracts the symbol as Undefined

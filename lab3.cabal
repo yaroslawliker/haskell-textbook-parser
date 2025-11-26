@@ -20,7 +20,8 @@ library textBookParser
   exposed-modules:     Reader, 
                        Parsing.Data,
                        Parsing.Parser,
-                       Parsing.Extractors.Word
+                       Parsing.Extractors.Word,
+                       Parsing.Extractors.Punctuation
                        
 
   build-depends:       base,
@@ -44,7 +45,8 @@ test-suite tests
     main-is:             Spec.hs
     other-modules:       TestReader,
                          Parsing.TestExtractToken,
-                         Parsing.Extractors.TestExtractWord
+                         Parsing.Extractors.TestExtractWord,
+                         Parsing.Extractors.TestExtractPunctuation
                          
     build-depends:       base,
                          text,
