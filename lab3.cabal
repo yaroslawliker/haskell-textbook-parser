@@ -20,6 +20,7 @@ library textBookParser
   exposed-modules:     Reader, 
                        Parsing.Data,
                        Parsing.Parser,
+                       Parsing.Extractors.SequenceGeneric,
                        Parsing.Extractors.Word,
                        Parsing.Extractors.Punctuation
                        
