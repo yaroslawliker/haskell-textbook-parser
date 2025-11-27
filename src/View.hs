@@ -25,6 +25,6 @@ printWordLists :: [[Text]] -> IO ()
 printWordLists [] = return ()
 printWordLists (l:ls) = do
     printWords l
-    TIO.putStrLn $ pack ""
+    TIO.putStr $ pack "\n\n"
     printWordLists ls
 
