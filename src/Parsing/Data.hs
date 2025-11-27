@@ -9,8 +9,6 @@ data TokenType =
     Number | -- Any sequence of digits
     Whitespace | -- Any sequence of whitespaces
     EndLine | -- \n symbol
-    ListMark | -- Header numeration, numeric list or pointed list
-    Symbol | -- Other symbols like ::, ->, | ect
     EOF |
     Undifined
     deriving (Show, Eq)
