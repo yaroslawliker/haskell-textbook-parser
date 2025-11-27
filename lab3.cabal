@@ -23,7 +23,9 @@ library textBookParser
                        Parsing.Extractors.SymbolGeneric,
                        Parsing.Extractors.SequenceGeneric,
                        Parsing.Extractors.Word,
+                       Parsing.Extractors.Number,
                        Parsing.Extractors.Punctuation,
+                       Parsing.Extractors.Endline
                        
 
   build-depends:       base,

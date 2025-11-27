@@ -6,13 +6,17 @@ import Parsing.Data
 
 -- Extractors
 import Parsing.Extractors.Word
+import Parsing.Extractors.Number (extractNumber)
 import Parsing.Extractors.Punctuation (extractPunctiation)
+import Parsing.Extractors.Endline (extractEndline)
 
 -- List of all extracters
 allTokenExtractors :: [ExtractToken]
 allTokenExtractors = [
     extractWord,
-    extractPunctiation
+    extractNumber,
+    extractPunctiation,
+    extractEndline
     ]
 
 -- Extractes token with given list of extracters and text
