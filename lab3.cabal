@@ -17,7 +17,8 @@ common warnings
 
 library textBookParser
   hs-source-dirs:      src
-  exposed-modules:     Reader, 
+  exposed-modules:     Reader,
+
                        Parsing.Data,
                        Parsing.Parser,
                        Parsing.Extractors.SymbolGeneric,
@@ -26,7 +27,9 @@ library textBookParser
                        Parsing.Extractors.Number,
                        Parsing.Extractors.Whitespace,
                        Parsing.Extractors.Punctuation,
-                       Parsing.Extractors.Endline
+                       Parsing.Extractors.Endline,
+
+                       Arranger
                        
 
   build-depends:       base,
