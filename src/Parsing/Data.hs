@@ -1,3 +1,4 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Parsing.Data where
 
 import Data.Text as T
@@ -17,7 +18,11 @@ data TokenType =
 data Token = Token
     { tokenType :: TokenType
     , substring :: T.Text -- The substring, forming this token
-    } deriving (Show, Eq)
+    } deriving (Eq)
+
+instance Show Token where
+    show (Token tType tVal) = 
+        show tType ++ ": \"" ++ T.unpack tVal ++ "\";"
 
 data ExtractionResult = ExtractionResult
     { token :: Token
