@@ -7,7 +7,7 @@ import Parsing.TestExtractToken (extractTokenTests)
 import Parsing.Extractors.TestExtractSequence (extractSequenceGenericTests)
 import Parsing.Extractors.TestExtractWord (extractWordTests)
 import Parsing.Extractors.TestExtractPunctuation (extractPunctuationTests)
-import Parsing.Extractors.Punctuation (extractPunctiation)
+import Parsing.Extractors.TestExtractWhitespace (extractWhitespaceTests)
     
 allTests :: Test
 allTests = TestList [
@@ -15,7 +15,8 @@ allTests = TestList [
     extractWordTests,
     extractTokenTests,
     extractPunctuationTests,
-    extractSequenceGenericTests
+    extractSequenceGenericTests,
+    extractWhitespaceTests
     ]
 
 main :: IO ()

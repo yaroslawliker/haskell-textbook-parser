@@ -24,6 +24,7 @@ library textBookParser
                        Parsing.Extractors.SequenceGeneric,
                        Parsing.Extractors.Word,
                        Parsing.Extractors.Number,
+                       Parsing.Extractors.Whitespace,
                        Parsing.Extractors.Punctuation,
                        Parsing.Extractors.Endline
                        
@@ -51,7 +52,8 @@ test-suite tests
                          Parsing.Extractors.TestExtractSequence,
                          Parsing.TestExtractToken,
                          Parsing.Extractors.TestExtractWord,
-                         Parsing.Extractors.TestExtractPunctuation
+                         Parsing.Extractors.TestExtractPunctuation,
+                         Parsing.Extractors.TestExtractWhitespace
                          
     build-depends:       base,
                          text,

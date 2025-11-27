@@ -6,7 +6,8 @@ import Data.Text as T
 data TokenType =
     Word | -- Simple word, as "названа"
     Punctiation | -- Set of symbols: ,.:[]()
-    Number | -- Any array of digits
+    Number | -- Any sequence of digits
+    Whitespace | -- Any sequence of whitespaces
     EndLine | -- \n symbol
     ListMark | -- Header numeration, numeric list or pointed list
     Symbol | -- Other symbols like ::, ->, | ect

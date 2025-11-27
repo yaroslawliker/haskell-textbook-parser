@@ -9,12 +9,14 @@ import Parsing.Extractors.Word
 import Parsing.Extractors.Number (extractNumber)
 import Parsing.Extractors.Punctuation (extractPunctiation)
 import Parsing.Extractors.Endline (extractEndline)
+import Parsing.Extractors.Whitespace (extractWhitespace)
 
 -- List of all extracters
 allTokenExtractors :: [ExtractToken]
 allTokenExtractors = [
     extractWord,
     extractNumber,
+    extractWhitespace,
     extractPunctiation,
     extractEndline
     ]
