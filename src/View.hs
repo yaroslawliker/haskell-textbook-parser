@@ -22,9 +22,9 @@ printWords (w:ws) = do
 
 -- Print words with commas and newline for each list
 printWordLists :: [[Text]] -> IO ()
-printWordLists [] = return ()
+printWordLists [l] = printWords l
 printWordLists (l:ls) = do
     printWords l
-    TIO.putStrLn $ pack ""
+    TIO.putStr $ pack "\n\n"
     printWordLists ls
 
