@@ -29,11 +29,13 @@ library textBookParser
                        Parsing.Extractors.Punctuation,
                        Parsing.Extractors.Endline,
 
-                       Arranger
+                       Arranger,
+                       View
                        
 
   build-depends:       base,
                        text,
+                       pretty-simple
   default-language:    Haskell2010
 
 executable lab3
@@ -41,7 +43,6 @@ executable lab3
     main-is:          Main.hs
     build-depends:    base ^>=4.18.3.0,
                       text,
-                      pretty-simple,
                       textBookParser                      
 
     hs-source-dirs:   app
